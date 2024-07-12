@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    
+    <link href="Style3.css" type="text/css" Rel="Stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed&display=swap" rel="stylesheet">
+    
+     <title>Inscription</title>
+    
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">  
+</head>
+
+<body>
+    
+    <div class="container-fluid">
+        <div class="row" id="topSection">
+            <div class="col-lg-2 col-sm-4" id="LogoPos">
+                <A href="index.html"><img class="mx-auto d-block img-fluid" src="Image/Logo7.png" ></A>
+            </div>
+			
+            <div class="col-lg-10 col-sm-8">
+                <nav class="navbar navbar-expand-lg navbar-light navbar-trans">
+                    <div class="container-fluid">
+                        <a class="navbar-brand mb-0 h1" href="#">Informatique</a>
+                        <button class="navbar-toggler navbar-toggler-right custom-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                        <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                            <ul class="navbar-nav m-auto">
+                                <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+                                <li class="nav-item"><a class="nav-link" href="Annee2.html">2<sup>éme</sup>Année</a></li>
+                                <li class="nav-item"><a class="nav-link" href="Annee3.html">3<SUP>éme</SUP>Année</a></li>
+                                <li class="nav-item"><a class="nav-link disabled" href="Inscription.html">Inscription</a></li>
+                                <li class="nav-item"><a class="nav-link" href="Authentification.html">Connéxion</a></li> 
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+			
+        <div class="container">
+            <div class="row">
+            <div class="col-md-2"></div>
+            
+            <div class="col-md-8" id="form">
+				<form Name="form" onsubmit="return Validation();" Method="Post" action="Formulaire.php">
+                    <h1>Formulaire d'inscription</h1>
+                    
+                    <div class="row">
+                  	 <div class="col-md-1"></div>
+                        <div class="col-md-5">
+        	               <input type="text" placeholder="nom" class="form-control" required="" Name="nom" id="name01"><br>
+                        </div>
+                        <div class="col-md-5">
+        	               <input type="text" placeholder="prénom" class="form-control" required="" Name="pre" id="name02">
+                        </div>
+
+                  	<div class="col-md-1"></div>
+                    </div>
+                    <br>
+                    
+                    <div class="row">
+                  	 <div class="col-md-1"></div>
+                     <div class="col-md-10">
+        	           <input type="email" name="email" placeholder="enter Email" class="form-control" required=""><br>
+                     </div>
+                  	 <div class="col-md-1"></div>
+                    </div>
+                    
+                    <div class="row">
+                     <div class="col-md-1"></div>
+                     <div class="col-md-3">
+                        <input type="number" name="age" Placeholder="age" class="form-control" id="age1823">	
+                     </div>
+                     <div class="col-md-3">
+	                   <label>Homme</label>&nbsp;&nbsp;
+	                   <input Type="radio" name="sexe" Value="Homme" checked>
+                     </div>
+                     <div class="col-md-4">
+                        <label>Femme</label>&nbsp;&nbsp;
+                        <input Type="radio" name="sexe" Value="Femme">
+                     </div>
+                     <div class="col-md-1"></div>
+                    </div>
+                    <br>
+                    
+                    <div class="row">
+			         <div class="col-md-1"></div>
+                     <div class="col-md-10">
+						<textarea rows="3" Name="Adresse" Placeholder="tapez ici votre adresse ..." class="form-control" required=""></textarea>
+					 </div>
+                     <div class="col-md-1"></div>
+                    </div>
+                    <br>
+                    
+                    <div class="row">
+                     <div class="col-md-1"></div>
+                     <div class="col-md-4">
+	                   <label>Wilaya</label>&nbsp;&nbsp;
+	                   <select id="Wilaya" name="Wilaya">
+						<option value="Sétif">Sétif</option>
+						<option value="Oran">Oran</option>
+						<option value="Alger">Alger</option>
+						<option value="Annaba">Annaba</option>
+                        <option value="Aucune">Aucune</option>
+					   </select>
+                     </div>
+                     <div class="col-md-6">
+                        <label>Photos</label>&nbsp;&nbsp;
+                        <input Type="file" Name="Photos">
+                     </div>
+                     <div class="col-md-1"></div>
+                    </div>
+                    <br>
+                    
+                    <div class="row">
+                  	 <div class="col-md-1"></div>
+                     <div class="col-md-10">
+        	            <input Type="checkbox" Name="AS" Value="Football" id="ChBx1" onclick="EnableDisableCheckBox123(this)" checked><label>Football</label>&nbsp;&nbsp;
+                        <input Type="checkbox" Name="AS" Value="Handball" id="ChBx2" onclick="EnableDisableCheckBox123(this)"><label>Handball</label>&nbsp;&nbsp;
+                        <input Type="checkbox" Name="AS" Value="Basketball" id="ChBx3" onclick="EnableDisableCheckBox123(this)"><label>Basketball</label>&nbsp;&nbsp;
+                        <input Type="checkbox" Name="AS" Value="Autre" id="ChBx4" onclick="EnableDisableCheckBox4(this)"><label>Autre</label>&nbsp;&nbsp;
+                        <input Type="checkbox" Name="AS" Value="Aucun" id="ChBx5" onclick="EnableDisableCheckBox5(this)"><label>Aucun</label>&nbsp;&nbsp;
+                     </div>
+                  	 <div class="col-md-1"></div>
+                    </div>
+                    <br>
+                    
+                    <div class="row">
+                     <div class="col-md-1"></div>
+                     <div class="col-md-5">
+	                   <label>2<SUP>éme </SUP>Année </label>&nbsp;&nbsp;
+	                   <input Type="radio" Name="AE" Value="2éme" Checked>
+                     </div>
+                     <div class="col-md-5">
+                        <label>3<SUP>éme </SUP>Année </label>&nbsp;&nbsp;
+                        <input Type="radio" Name="AE" Value="3éme">
+                     </div>
+                     <div class="col-md-1"></div>
+                    </div>
+                    <br>
+                    
+                    <div class="row">
+                  	 <div class="col-md-1"></div>
+                     <div class="col-md-10">
+        	               <input Type="password" Name="Code1" placeholder="code secret" class="form-control" required="" id="passCode"><br>
+                           <input Type="password" Name="Code2" placeholder="confirmer le code secret" class="form-control" required="" id="passCode1">
+                     </div>
+                  	 <div class="col-md-1"></div>
+                    </div>
+                    <br>
+                    
+                    <div class="row">
+                        <div class="col-md-3"></div>
+                        <div class="col-md-3">
+                            <button type="reset" value="Effacer" class="btn btn-info">Effacer</button>
+                        </div><br>
+                        <div class="col-md-3">
+                            <button type="submit" value="Envoyer" class="btn btn-info">Envoyer</button>
+                        </div>
+                        <div class="col-md-3"></div>
+                    </div>
+                    <br>
+                </form>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+     </div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="Script.js"></script>
+</body>
+</html>

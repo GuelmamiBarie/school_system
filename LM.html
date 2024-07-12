@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+    
+    <title>LM</title>
+    
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+<script type="text/javascript">
+ var Delta ; 
+	function Resoudre_equation()
+	{
+		var a = prompt("Entrer a :") ; 
+		var b = prompt("Entrer b :") ;
+		var c = prompt("Entrer c :") ; 
+		var X1 ; 
+		var X2 ; 
+		
+		document.getElementById("x2").value = a ; 
+		document.getElementById("x").value = b ;
+		document.getElementById("C1").value = c ; 
+		
+		if((a==null)||(b==null) || (c==null) || (isNaN(a)) || (isNaN(b)) || (isNaN(c)) )
+		{
+			alert("Erreur !!")
+		}
+		else
+		{
+			if(a==0)
+			{
+				alert("Erreur !! Voter Equation n'est Pas Du second degre .")
+			}
+			else
+			{
+				Delta = (b*b)-(4*a*c) ; 
+				
+				if(Delta < 0)
+				{
+					alert("Aucun solution.")
+					X1 = "Aucun Solution" ; 
+					X2 = "Aucun Solution" ; 
+				}
+				else
+				{
+					if(Delta > 0)
+					{
+						X1 = (-b-(Math.sqrt(Delta)))/(2*a) ; 
+						X2 = (-b+(Math.sqrt(Delta)))/(2*a) ; 
+					}
+					else
+					{
+						X1=(-b)/(2*a) ; 
+						X2="Une Seul Solution" ; 
+					}
+				
+				}
+			}
+		}
+		
+		document.getElementById("X1S").value = X1 ; 
+		document.getElementById("X2S").value = X2 ; 	
+	}
+	
+	function DeltaValue ()
+	{
+		var Que = confirm("Voulez vous savoir la valeur de delta ?") ;	
+		if (Que)
+		{
+			alert ("La valeur de delta est :" + Delta + " .") ;
+		}
+	}
+
+</script>
+</head>
+
+<body>
+<center>
+
+<h1>Logique Mathematique<h1>
+<h2><b><i>Résoudre une équation du second degré:</i></b></h2>
+
+<b>Equation : <b><br><br>
+<input id="x2"  type="number" name="X2A" size=3 placeholder="a">x<sup>2</sup>+
+<input id="x" type="number" name="XB" size=3 placeholder="b">x + 
+<input id="C1" type="number"  name="CS"size=3 placeholder="c"><span id="demo">0</span><br><br><br><br>
+
+<button type="button" OnClick="Resoudre_equation()">Résoudre l'équation</button><br><br><br>
+
+<b>Solutions :<b> <br><br><br>
+X1 = <output id="X1S" name="X1SN"></output><br>
+X2 = <output id="X2S"name="X2SN"></output><br><br><br><br>
+
+<button type="button" OnClick="DeltaValue()" >Voir la valeur de delta</button> <br><br><br>
+
+
+<br><br><br><a href="Index.html">Page d'accueil<a>
+</center>
+    
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</body>
+</html>

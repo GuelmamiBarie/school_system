@@ -1,0 +1,215 @@
+*
+{
+	font-family : Century Gothic ; 
+}
+
+#headerHomePage
+{
+    background-image:linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.5)), url(Image/Comp5.jpg);
+    height: 85vh;
+    background-size: cover; 
+    background-position: right;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#headerBackOfficeId
+{
+    background-image:linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.5)), url(Image/Comp3.jpg);
+    height: 70vh;
+    background-size: cover; 
+    background-position: right;
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+}
+
+/*---------------------------------------- Style the TopSection ----------------------------*/
+#LogoPos
+{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 60px;
+}
+/*------------------------------------------ Style the navbar -----------------------------*/
+.navbar
+{
+    margin-top: 25px;
+}
+.navbar-brand
+{
+    color: #fff !important;
+    font-family: 'Roboto';
+}
+
+.navbar .navbar-nav .disabled
+{
+    background-color: #fff !important; 
+    color: #000 !important;
+}
+
+.navbar .navbar-nav .nav-link:hover
+{ 
+    background-color: #fff !important; 
+    color: #000 !important; 
+}
+
+.navbar .navbar-nav li a
+{
+    color: #fff !important;
+    font-size: 17px; 
+    padding: 2px 20px !important; 
+    border: 0.5px  solid #fff; 
+    margin-left: 10px;
+}
+
+.custom-toggler .navbar-toggler-icon
+{
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255,255)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E") !important;
+}
+
+.custom-toggler.navbar-toggler
+{ 
+    border-color: #fff !important; 
+}
+
+/*------------------------------------------------- Style the middle section -------------------------------*/
+#middleSection
+{
+    padding-top: 25%;
+    justify-content:center;
+}
+
+#homePageTitle
+{
+    color: #fff; 
+    font-size: 40px; 
+    transition: 0.6s ease; 
+}
+
+#BackOfficePageTitle
+{
+    color: #fff; 
+    font-size: 40px; 
+    transition: 0.6s ease; 
+}
+
+#middleSectionBO
+{
+    padding-top: 5%;
+    justify-content:center;
+}
+
+/*-------------------------------------------- Style the the rest of the home page ----------------------------------*/
+.jumbotron
+{
+    padding: 1rem;
+    border-radius: 0;
+}
+
+.padding 
+{
+    padding-bottom: 2rem;
+}
+
+.welcome
+{
+    /*width: 75%;*/
+    margin: 0 auto;
+    padding-top: 2rem;
+}
+
+.welcome hr
+{
+    border-top: 2px solid #b4b4b4;
+    width: 50%;
+    margin-top: .3rem;
+    margin-bottom: 1rem;
+} 
+
+.fa-code
+{
+    color: #e54d26;
+}
+
+.fa-bold
+{
+    color: #563d7c;
+}
+
+.fa-css3
+{
+    color: #2163af;
+}
+
+.fa-js
+{
+    color: #f3b8;
+}
+
+.fa-php
+{
+    color: #f457;
+}
+
+.fa-code, .fa-bold, .fa-css3, .fa-js, .fa-php
+{
+    font-size: 4em;
+    margin: 1rem;
+}
+
+.social a
+{
+    font-size: 4.5em;
+    padding: 3rem;
+}
+
+.fa-facebook
+{
+    color: #3b5998;
+}
+
+.fa-google-plus-g
+{
+    color: #dd4b39;
+}
+
+.fa-instagram
+{
+    color: #517fa4;
+}
+
+.fa-facebook:hover, .fa-google-plus-g:hover, .fa-instagram:hover
+{
+    color: #d5d5d5;
+}
+
+footer
+{
+    background-color: #3f3f3f;
+    color: #5d5d5d;
+    padding-top: 1rem;
+}
+
+/*--------- Media Queries-----------*/
+@media (max-width: 992px)
+{
+    .social a
+    {
+        font-size: 4em;
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 768px)
+{
+    .social a
+    {
+        font-size: 2.5em;
+        padding: 1.2rem;
+    }
+    
+    .display-4
+    {
+        font-size: 3em;
+    }
+}

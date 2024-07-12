@@ -1,0 +1,93 @@
+*
+{
+	margin : 0 ; 
+	padding : 0 ; 
+	font-family : Century Gothic ; 
+}
+body
+ {
+	 background-image:linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.5)), url(Image/Comp2.jpg);  
+	 height: 100%; 
+	 background-size: cover; 
+	 background-position: centre;  
+ }
+/*---------------------------------------------------- Style the list of modules -----------------------------------------------*/
+ #ListASection ul
+ {
+     list-style-type: none;
+     width: 450px;  
+     margin: 50px  auto 0 ; 
+     padding: 10px; 
+     box-sizing : border-box;
+ }
+ 
+ #ListASection UL LI
+ {
+     display: flex;
+	 background: rgba(255,255,255,.1); 
+	 padding: 10px 20px; 
+	 color: #fff ; 
+	 margin: 7px 0; 
+	 transition:  .5s; 
+ }
+ #ListASection UL LI:hover 
+  {
+	  transform: scale(1.06); 
+	  background: #000; 
+  }
+
+#Titlelist
+{
+    color: #000 !important;
+    transform: scale(1.12); 
+    background: rgba(255,255,255,.8) !important;
+}
+/*---------------------------------------- Style the TopSection ----------------------------*/
+#LogoPos
+{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 60px;
+}
+/*------------------------------------------ Style the navbar -----------------------------*/
+.navbar
+{
+    margin-top: 25px;
+}
+.navbar-brand
+{
+    color: #fff !important;
+    font-family: 'Roboto';
+}
+
+.navbar .navbar-nav .disabled
+{
+    background-color: #fff !important; 
+    color: #000 !important;
+}
+
+.navbar .navbar-nav .nav-link:hover
+{ 
+    background-color: #fff !important; 
+    color: #000 !important; 
+}
+
+.navbar .navbar-nav li a
+{
+    color: #fff !important;
+    font-size: 17px; 
+    padding: 2px 20px !important; 
+    border: 0.5px  solid #fff; 
+    margin-left: 10px;
+}
+
+.custom-toggler .navbar-toggler-icon
+{
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255,255)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E") !important;
+}
+
+.custom-toggler.navbar-toggler
+{ 
+    border-color: #fff; 
+}
+/*-------------------------------------------------------- end -----------------------------------------------------------*/
